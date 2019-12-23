@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistenceUnit>
+    <dataBase></dataBase>
+    <driver>mysql</driver>
+    <host>localhost</host>
+    <passsword></passsword>
+    <user></user>
+</persistenceUnit>
