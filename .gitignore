@@ -24,3 +24,5 @@ hs_err_pid*
 
 #PU
 persistence.xml
+/nbproject/private/
+/build/

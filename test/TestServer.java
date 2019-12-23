@@ -30,9 +30,12 @@ public class TestServer {
     }
 
     private void populate() throws Exception {
+
         //create autre element
         Autre autre;
         AutreService autreService = MetierFactory.getAutreService();
+
+        autreService.getAll();
 
         autre = new Autre("Carton");
         autre.setNombre(2);
