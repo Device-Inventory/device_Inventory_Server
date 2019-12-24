@@ -1,12 +1,10 @@
 
-import fr.freeboxos.ftb.metier.AdministrateurService;
 import fr.freeboxos.ftb.metier.AutreService;
 import fr.freeboxos.ftb.metier.CableService;
 import fr.freeboxos.ftb.metier.HDDService;
 import fr.freeboxos.ftb.metier.MemoireService;
 import fr.freeboxos.ftb.metier.MetierFactory;
 import fr.freeboxos.ftb.metier.ProcesseurService;
-import fr.freeboxos.ftb.metier.entitys.Administrateur;
 import fr.freeboxos.ftb.metier.entitys.Autre;
 import fr.freeboxos.ftb.metier.entitys.Cable;
 import fr.freeboxos.ftb.metier.entitys.HDD;
@@ -37,50 +35,61 @@ public class TestServer {
 
         autreService.getAll();
 
-        autre = new Autre("Carton");
-        autre.setNombre(2);
-        autreService.add(autre);
+        for (int i = 0; i < 1000; i++) {
+            autre = new Autre("Carton");
+            autre.setNombre(2);
+            autreService.add(autre);
+        }
 
         //create cable
         Cable cable;
         CableService cableService = MetierFactory.getCableService();
 
-        cable = new Cable("hdmi", "hdmi", "hdmi", 1);
-        cableService.add(cable);
+        for (int i = 0; i < 1000; i++) {
+            cable = new Cable("hdmi", "hdmi", "hdmi", 1);
+            cableService.add(cable);
+        }
 
         //create hdd
         HDD hdd;
         HDDService hDDService = MetierFactory.getHDDService();
 
-        hdd = new HDD("Seagate", "ABC", "SATA", "1.5", "1To", "7200", "64", "50");
-        hDDService.add(hdd);
+        for (int i = 0; i < 1000; i++) {
+            hdd = new HDD("Seagate", "ABC", "SATA", "1.5", "1To", "7200", "64", "50");
+            hDDService.add(hdd);
+        }
 
         SSD ssd;
 
-        ssd = new SSD("fvgbhn", true, "fghn", "fghj", "fgbn,", 56, true, "cvbn", "fghj", "vbn", "cvb", "vbn", "fghj,k;", "dfgh", "cvbn");
+        for (int i = 0; i < 1000; i++) {
+            ssd = new SSD("fvgbhn", true, "fghn", "fghj", "fgbn,", 56, true, "cvbn", "fghj", "vbn", "cvb", "vbn", "fghj,k;", "dfgh", "cvbn");
 
-        hDDService.add(ssd);
+            hDDService.add(ssd);
+        }
 
         Memoire memoire;
         MemoireService memoireService = MetierFactory.getMemoireService();
 
-        memoire = new Memoire("is", "dbkedf", "fkn", "bjknb ", "bkj bn", "bkn", "kjve", "bk e", "kbndevk", "567");
-        memoireService.add(memoire);
+        for (int i = 0; i < 1000; i++) {
+            memoire = new Memoire("is", "dbkedf", "fkn", "bjknb ", "bkj bn", "bkn", "kjve", "bk e", "kbndevk", "567");
+            memoireService.add(memoire);
+        }
 
         Processeur processeur;
         ProcesseurService processeurService = MetierFactory.getProcesseurService();
 
-        processeur = new Processeur("kjbn", "dfkdb", "bknk", "fkvjdb", "kjv nbk", 6, 18, "bkjb", "kjb", "kbdnb", "ffbnf", "kfvjnerk", "56", "456");
-        processeurService.add(processeur);
+        for (int i = 0; i < 1000; i++) {
+            processeur = new Processeur("kjbn", "dfkdb", "bknk", "fkvjdb", "kjv nbk", 6, 18, "bkjb", "kjb", "kbdnb", "ffbnf", "kfvjnerk", "56", "456");
+            processeurService.add(processeur);
+        }
 
-        Administrateur administrateur;
-        AdministrateurService administrateurService = MetierFactory.getAdministrateurService();
-
-        administrateur = new Administrateur();
-        administrateur.setLogin("admin");
-        administrateur.setMdp("admin");
-        administrateurService.add(administrateur);
-
+//        Administrateur administrateur;
+//        AdministrateurService administrateurService = MetierFactory.getAdministrateurService();
+//
+//        administrateur = new Administrateur();
+//        administrateur.setLogin("admin");
+//        administrateur.setMdp("admin");
+//        administrateurService.add(administrateur);
     }
 
 }
