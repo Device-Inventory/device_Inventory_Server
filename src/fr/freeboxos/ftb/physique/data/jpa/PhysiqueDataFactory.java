@@ -92,4 +92,14 @@ public class PhysiqueDataFactory {
 
         return administateurDataService;
     }
+
+    private static OrdinateurDataService ordinateurDataService = null;
+
+    public static OrdinateurDataService getOrdinateurDataService() {
+        if (ordinateurDataService == null) {
+            ordinateurDataService = new OrdinateurDataServiceJPAImpl(PU);
+        }
+
+        return ordinateurDataService;
+    }
 }

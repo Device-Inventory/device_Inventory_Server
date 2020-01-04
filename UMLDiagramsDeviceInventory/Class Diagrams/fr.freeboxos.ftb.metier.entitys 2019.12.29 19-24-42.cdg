@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="fr.freeboxos.ftb.metier.entitys">
+  <ClassDiagramComponents>
+    <Class name="HDD" package="fr.freeboxos.ftb.metier.entitys" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="id" type="long" visibility="private"/>
+        <Field name="marque" type="String" visibility="private"/>
+        <Field name="modele" type="String" visibility="private"/>
+        <Field name="interface_ordinateur" type="String" visibility="private"/>
+        <Field name="format" type="String" visibility="private"/>
+        <Field name="capacite" type="String" visibility="private"/>
+        <Field name="vitesse_de_rotation" type="String" visibility="private"/>
+        <Field name="cache" type="String" visibility="private"/>
+        <Field name="prix" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="marque"/>
+          <Argument type="String" name="modele"/>
+          <Argument type="String" name="interface_ordinateur"/>
+          <Argument type="String" name="format"/>
+          <Argument type="String" name="capacite"/>
+          <Argument type="String" name="vitesse_de_rotation"/>
+          <Argument type="String" name="cache"/>
+          <Argument type="String" name="prix"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="long" visibility="public"/>
+        <Method name="setId" returnType="long" visibility="public">
+          <Argument type="long" name="id"/>
+        </Method>
+        <Method name="getMarque" returnType="String" visibility="public"/>
+        <Method name="setMarque" returnType="String" visibility="public">
+          <Argument type="String" name="marque"/>
+        </Method>
+        <Method name="getModele" returnType="String" visibility="public"/>
+        <Method name="setModele" returnType="String" visibility="public">
+          <Argument type="String" name="modele"/>
+        </Method>
+        <Method name="getInterface_ordinateur" returnType="String" visibility="public"/>
+        <Method name="setInterface_ordinateur" returnType="String" visibility="public">
+          <Argument type="String" name="interface_ordinateur"/>
+        </Method>
+        <Method name="getFormat" returnType="String" visibility="public"/>
+        <Method name="setFormat" returnType="String" visibility="public">
+          <Argument type="String" name="format"/>
+        </Method>
+        <Method name="getCapacite" returnType="String" visibility="public"/>
+        <Method name="setCapacite" returnType="String" visibility="public">
+          <Argument type="String" name="capacite"/>
+        </Method>
+        <Method name="getVitesse_de_rotation" returnType="String" visibility="public"/>
+        <Method name="setVitesse_de_rotation" returnType="String" visibility="public">
+          <Argument type="String" name="vitesse_de_rotation"/>
+        </Method>
+        <Method name="getCache" returnType="String" visibility="public"/>
+        <Method name="setCache" returnType="String" visibility="public">
+          <Argument type="String" name="cache"/>
+        </Method>
+        <Method name="getPrix" returnType="String" visibility="public"/>
+        <Method name="setPrix" returnType="String" visibility="public">
+          <Argument type="String" name="prix"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Autre" package="fr.freeboxos.ftb.metier.entitys" visibility="public" xPosition="1156.0" yPosition="154.0">
+      <Fields>
+        <Field name="id" type="long" visibility="private"/>
+        <Field name="element" type="String" visibility="private"/>
+        <Field name="nombre" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="element"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="int" visibility="public"/>
+        <Method name="setNombre" returnType="int" visibility="public">
+          <Argument type="int" name="nombre"/>
+        </Method>
+        <Method name="getId" returnType="long" visibility="public"/>
+        <Method name="setId" returnType="long" visibility="public">
+          <Argument type="long" name="id"/>
+        </Method>
+        <Method name="getElement" returnType="String" visibility="public"/>
+        <Method name="setElement" returnType="String" visibility="public">
+          <Argument type="String" name="element"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="SSD" package="fr.freeboxos.ftb.metier.entitys" visibility="public" xPosition="-323.0" yPosition="850.0">
+      <Fields>
+        <Field name="type_memoire" type="String" visibility="private"/>
+        <Field name="nvme" type="boolean" visibility="private"/>
+        <Field name="controleur" type="String" visibility="private"/>
+        <Field name="lecture" type="String" visibility="private"/>
+        <Field name="ecriture" type="String" visibility="private"/>
+        <Field name="iops" type="long" visibility="private"/>
+        <Field name="trim" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="type_memoire"/>
+          <Argument type="boolean" name="nvme"/>
+          <Argument type="String" name="controleur"/>
+          <Argument type="String" name="lecture"/>
+          <Argument type="String" name="ecriture"/>
+          <Argument type="long" name="iops"/>
+          <Argument type="boolean" name="trim"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="type_memoire"/>
+          <Argument type="boolean" name="nvme"/>
+          <Argument type="String" name="controleur"/>
+          <Argument type="String" name="lecture"/>
+          <Argument type="String" name="ecriture"/>
+          <Argument type="long" name="iops"/>
+          <Argument type="boolean" name="trim"/>
+          <Argument type="String" name="marque"/>
+          <Argument type="String" name="modele"/>
+          <Argument type="String" name="interface_ordinateur"/>
+          <Argument type="String" name="format"/>
+          <Argument type="String" name="capacite"/>
+          <Argument type="String" name="vitesse_de_rotation"/>
+          <Argument type="String" name="cache"/>
+          <Argument type="String" name="prix"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getType_memoire" returnType="String" visibility="public"/>
+        <Method name="setType_memoire" returnType="String" visibility="public">
+          <Argument type="String" name="type_memoire"/>
+        </Method>
+        <Method name="isNvme" returnType="boolean" visibility="public"/>
+        <Method name="setNvme" returnType="boolean" visibility="public">
+          <Argument type="boolean" name="nvme"/>
+        </Method>
+        <Method name="getControleur" returnType="String" visibility="public"/>
+        <Method name="setControleur" returnType="String" visibility="public">
+          <Argument type="String" name="controleur"/>
+        </Method>
+        <Method name="getLecture" returnType="String" visibility="public"/>
+        <Method name="setLecture" returnType="String" visibility="public">
+          <Argument type="String" name="lecture"/>
+        </Method>
+        <Method name="getEcriture" returnType="String" visibility="public"/>
+        <Method name="setEcriture" returnType="String" visibility="public">
+          <Argument type="String" name="ecriture"/>
+        </Method>
+        <Method name="getIops" returnType="long" visibility="public"/>
+        <Method name="setIops" returnType="long" visibility="public">
+          <Argument type="long" name="iops"/>
+        </Method>
+        <Method name="isTrim" returnType="boolean" visibility="public"/>
+        <Method name="setTrim" returnType="boolean" visibility="public">
+          <Argument type="boolean" name="trim"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Processeur" package="fr.freeboxos.ftb.metier.entitys" visibility="public" xPosition="1518.0" yPosition="36.0">
+      <Fields>
+        <Field name="id" type="long" visibility="private"/>
+        <Field name="marque" type="String" visibility="private"/>
+        <Field name="modele" type="String" visibility="private"/>
+        <Field name="socket" type="String" visibility="private"/>
+        <Field name="frequence" type="String" visibility="private"/>
+        <Field name="turbo" type="String" visibility="private"/>
+        <Field name="core" type="int" visibility="private"/>
+        <Field name="thread" type="int" visibility="private"/>
+        <Field name="plateforme_nom" type="String" visibility="private"/>
+        <Field name="finesse_gravure" type="String" visibility="private"/>
+        <Field name="TDP" type="String" visibility="private"/>
+        <Field name="L1" type="String" visibility="private"/>
+        <Field name="L2" type="String" visibility="private"/>
+        <Field name="L3" type="String" visibility="private"/>
+        <Field name="prix" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="marque"/>
+          <Argument type="String" name="modele"/>
+          <Argument type="String" name="socket"/>
+          <Argument type="String" name="frequence"/>
+          <Argument type="String" name="turbo"/>
+          <Argument type="int" name="core"/>
+          <Argument type="int" name="thread"/>
+          <Argument type="String" name="plateforme_nom"/>
+          <Argument type="String" name="finesse_gravure"/>
+          <Argument type="String" name="TDP"/>
+          <Argument type="String" name="L1"/>
+          <Argument type="String" name="L2"/>
+          <Argument type="String" name="L3"/>
+          <Argument type="String" name="prix"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPrix" returnType="String" visibility="public"/>
+        <Method name="setPrix" returnType="String" visibility="public">
+          <Argument type="String" name="prix"/>
+        </Method>
+        <Method name="getId" returnType="long" visibility="public"/>
+        <Method name="setId" returnType="long" visibility="public">
+          <Argument type="long" name="id"/>
+        </Method>
+        <Method name="getMarque" returnType="String" visibility="public"/>
+        <Method name="setMarque" returnType="String" visibility="public">
+          <Argument type="String" name="marque"/>
+        </Method>
+        <Method name="getModele" returnType="String" visibility="public"/>
+        <Method name="setModele" returnType="String" visibility="public">
+          <Argument type="String" name="modele"/>
+        </Method>
+        <Method name="getSocket" returnType="String" visibility="public"/>
+        <Method name="setSocket" returnType="String" visibility="public">
+          <Argument type="String" name="socket"/>
+        </Method>
+        <Method name="getFrequence" returnType="String" visibility="public"/>
+        <Method name="setFrequence" returnType="String" visibility="public">
+          <Argument type="String" name="frequence"/>
+        </Method>
+        <Method name="getTurbo" returnType="String" visibility="public"/>
+        <Method name="setTurbo" returnType="String" visibility="public">
+          <Argument type="String" name="turbo"/>
+        </Method>
+        <Method name="getCore" returnType="int" visibility="public"/>
+        <Method name="setCore" returnType="int" visibility="public">
+          <Argument type="int" name="core"/>
+        </Method>
+        <Method name="getThread" returnType="int" visibility="public"/>
+        <Method name="setThread" returnType="int" visibility="public">
+          <Argument type="int" name="thread"/>
+        </Method>
+        <Method name="getPlateforme_nom" returnType="String" visibility="public"/>
+        <Method name="setPlateforme_nom" returnType="String" visibility="public">
+          <Argument type="String" name="plateforme_nom"/>
+        </Method>
+        <Method name="getFinesse_gravure" returnType="String" visibility="public"/>
+        <Method name="setFinesse_gravure" returnType="String" visibility="public">
+          <Argument type="String" name="finesse_gravure"/>
+        </Method>
+        <Method name="getTDP" returnType="String" visibility="public"/>
+        <Method name="setTDP" returnType="String" visibility="public">
+          <Argument type="String" name="TDP"/>
+        </Method>
+        <Method name="getL1" returnType="String" visibility="public"/>
+        <Method name="setL1" returnType="String" visibility="public">
+          <Argument type="String" name="L1"/>
+        </Method>
+        <Method name="getL2" returnType="String" visibility="public"/>
+        <Method name="setL2" returnType="String" visibility="public">
+          <Argument type="String" name="L2"/>
+        </Method>
+        <Method name="getL3" returnType="String" visibility="public"/>
+        <Method name="setL3" returnType="String" visibility="public">
+          <Argument type="String" name="L3"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Memoire" package="fr.freeboxos.ftb.metier.entitys" visibility="public" xPosition="1518.0" yPosition="1032.0">
+      <Fields>
+        <Field name="id" type="long" visibility="private"/>
+        <Field name="marque" type="String" visibility="private"/>
+        <Field name="modele" type="String" visibility="private"/>
+        <Field name="type" type="String" visibility="private"/>
+        <Field name="format" type="String" visibility="private"/>
+        <Field name="capacite" type="String" visibility="private"/>
+        <Field name="frequence_memoire" type="String" visibility="private"/>
+        <Field name="ECC" type="String" visibility="private"/>
+        <Field name="radiateur" type="String" visibility="private"/>
+        <Field name="tension" type="String" visibility="private"/>
+        <Field name="prix" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="marque"/>
+          <Argument type="String" name="modele"/>
+          <Argument type="String" name="type"/>
+          <Argument type="String" name="format"/>
+          <Argument type="String" name="capacite"/>
+          <Argument type="String" name="frequence_memoire"/>
+          <Argument type="String" name="ECC"/>
+          <Argument type="String" name="radiateur"/>
+          <Argument type="String" name="tension"/>
+          <Argument type="String" name="prix"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="long" visibility="public"/>
+        <Method name="setId" returnType="long" visibility="public">
+          <Argument type="long" name="id"/>
+        </Method>
+        <Method name="getMarque" returnType="String" visibility="public"/>
+        <Method name="setMarque" returnType="String" visibility="public">
+          <Argument type="String" name="marque"/>
+        </Method>
+        <Method name="getModele" returnType="String" visibility="public"/>
+        <Method name="setModele" returnType="String" visibility="public">
+          <Argument type="String" name="modele"/>
+        </Method>
+        <Method name="getType" returnType="String" visibility="public"/>
+        <Method name="setType" returnType="String" visibility="public">
+          <Argument type="String" name="type"/>
+        </Method>
+        <Method name="getFormat" returnType="String" visibility="public"/>
+        <Method name="setFormat" returnType="String" visibility="public">
+          <Argument type="String" name="format"/>
+        </Method>
+        <Method name="getCapacite" returnType="String" visibility="public"/>
+        <Method name="setCapacite" returnType="String" visibility="public">
+          <Argument type="String" name="capacite"/>
+        </Method>
+        <Method name="getFrequence_memoire" returnType="String" visibility="public"/>
+        <Method name="setFrequence_memoire" returnType="String" visibility="public">
+          <Argument type="String" name="frequence_memoire"/>
+        </Method>
+        <Method name="getECC" returnType="String" visibility="public"/>
+        <Method name="setECC" returnType="String" visibility="public">
+          <Argument type="String" name="ECC"/>
+        </Method>
+        <Method name="getRadiateur" returnType="String" visibility="public"/>
+        <Method name="setRadiateur" returnType="String" visibility="public">
+          <Argument type="String" name="radiateur"/>
+        </Method>
+        <Method name="getTension" returnType="String" visibility="public"/>
+        <Method name="setTension" returnType="String" visibility="public">
+          <Argument type="String" name="tension"/>
+        </Method>
+        <Method name="getPrix" returnType="String" visibility="public"/>
+        <Method name="setPrix" returnType="String" visibility="public">
+          <Argument type="String" name="prix"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Administrateur" package="fr.freeboxos.ftb.metier.entitys" visibility="public" xPosition="529.0" yPosition="1383.0">
+      <Fields>
+        <Field name="id" type="long" visibility="private"/>
+        <Field name="login" type="String" visibility="private"/>
+        <Field name="mdp" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="login"/>
+          <Argument type="String" name="mdp"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="long" visibility="public"/>
+        <Method name="setId" returnType="long" visibility="public">
+          <Argument type="long" name="id"/>
+        </Method>
+        <Method name="isValid" returnType="String" visibility="public">
+          <Argument type="String" name="mdp"/>
+        </Method>
+        <Method name="getLogin" returnType="String" visibility="public"/>
+        <Method name="setLogin" returnType="String" visibility="public">
+          <Argument type="String" name="login"/>
+        </Method>
+        <Method name="getMdp" returnType="String" visibility="public"/>
+        <Method name="setMdp" returnType="String" visibility="public">
+          <Argument type="String" name="mdp"/>
+        </Method>
+        <Method name="setEncodedMdp" returnType="String" visibility="public">
+          <Argument type="String" name="mdp"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="Object" visibility="public">
+          <Argument type="Object" name="obj"/>
+        </Method>
+        <Method name="getSHA" returnType="String" visibility="public" isStatic="true">
+          <Argument type="String" name="input"/>
+        </Method>
+        <Method name="toHexString" returnType="byte[]" visibility="public" isStatic="true">
+          <Argument type="byte[]" name="hash"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Cable" package="fr.freeboxos.ftb.metier.entitys" visibility="public" xPosition="47.0" yPosition="1383.0">
+      <Fields>
+        <Field name="id" type="long" visibility="private"/>
+        <Field name="type" type="String" visibility="private"/>
+        <Field name="prise_a" type="String" visibility="private"/>
+        <Field name="prise_b" type="String" visibility="private"/>
+        <Field name="nombre" type="long" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="type"/>
+          <Argument type="String" name="prise_a"/>
+          <Argument type="String" name="prise_b"/>
+          <Argument type="long" name="nombre"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="long" visibility="public"/>
+        <Method name="setId" returnType="long" visibility="public">
+          <Argument type="long" name="id"/>
+        </Method>
+        <Method name="getType" returnType="String" visibility="public"/>
+        <Method name="setType" returnType="String" visibility="public">
+          <Argument type="String" name="type"/>
+        </Method>
+        <Method name="getPrise_a" returnType="String" visibility="public"/>
+        <Method name="setPrise_a" returnType="String" visibility="public">
+          <Argument type="String" name="prise_a"/>
+        </Method>
+        <Method name="getPrise_b" returnType="String" visibility="public"/>
+        <Method name="setPrise_b" returnType="String" visibility="public">
+          <Argument type="String" name="prise_b"/>
+        </Method>
+        <Method name="getNombre" returnType="long" visibility="public"/>
+        <Method name="setNombre" returnType="long" visibility="public">
+          <Argument type="long" name="nombre"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="fr.freeboxos.ftb.metier.entitys.SSD" target="fr.freeboxos.ftb.metier.entitys.HDD"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

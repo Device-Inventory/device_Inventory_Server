@@ -4,11 +4,13 @@ import fr.freeboxos.ftb.metier.CableService;
 import fr.freeboxos.ftb.metier.HDDService;
 import fr.freeboxos.ftb.metier.MemoireService;
 import fr.freeboxos.ftb.metier.MetierFactory;
+import fr.freeboxos.ftb.metier.OrdinateurService;
 import fr.freeboxos.ftb.metier.ProcesseurService;
 import fr.freeboxos.ftb.metier.entitys.Autre;
 import fr.freeboxos.ftb.metier.entitys.Cable;
 import fr.freeboxos.ftb.metier.entitys.HDD;
 import fr.freeboxos.ftb.metier.entitys.Memoire;
+import fr.freeboxos.ftb.metier.entitys.Ordinateur;
 import fr.freeboxos.ftb.metier.entitys.Processeur;
 import fr.freeboxos.ftb.metier.entitys.SSD;
 
@@ -35,7 +37,7 @@ public class TestServer {
 
         autreService.getAll();
 
-        for (int i = 0; i < 1000; i++) {
+        for (int i = 0; i < 10; i++) {
             autre = new Autre("Carton");
             autre.setNombre(2);
             autreService.add(autre);
@@ -45,7 +47,7 @@ public class TestServer {
         Cable cable;
         CableService cableService = MetierFactory.getCableService();
 
-        for (int i = 0; i < 1000; i++) {
+        for (int i = 0; i < 10; i++) {
             cable = new Cable("hdmi", "hdmi", "hdmi", 1);
             cableService.add(cable);
         }
@@ -54,15 +56,15 @@ public class TestServer {
         HDD hdd;
         HDDService hDDService = MetierFactory.getHDDService();
 
-        for (int i = 0; i < 1000; i++) {
+        for (int i = 0; i < 10; i++) {
             hdd = new HDD("Seagate", "ABC", "SATA", "1.5", "1To", "7200", "64", "50");
             hDDService.add(hdd);
         }
 
         SSD ssd;
 
-        for (int i = 0; i < 1000; i++) {
-            ssd = new SSD("fvgbhn", true, "fghn", "fghj", "fgbn,", 56, true, "cvbn", "fghj", "vbn", "cvb", "vbn", "fghj,k;", "dfgh", "cvbn");
+        for (int i = 0; i < 10; i++) {
+            ssd = new SSD("fvgbhn", true, "fghn", "fghj", "fgbn,", 56, true, "cvbn", "fghj", "vbn", "cvb", "vbn", "fghj,k;", "dfgh", "50");
 
             hDDService.add(ssd);
         }
@@ -70,7 +72,7 @@ public class TestServer {
         Memoire memoire;
         MemoireService memoireService = MetierFactory.getMemoireService();
 
-        for (int i = 0; i < 1000; i++) {
+        for (int i = 0; i < 10; i++) {
             memoire = new Memoire("is", "dbkedf", "fkn", "bjknb ", "bkj bn", "bkn", "kjve", "bk e", "kbndevk", "567");
             memoireService.add(memoire);
         }
@@ -78,18 +80,23 @@ public class TestServer {
         Processeur processeur;
         ProcesseurService processeurService = MetierFactory.getProcesseurService();
 
-        for (int i = 0; i < 1000; i++) {
+        for (int i = 0; i < 10; i++) {
             processeur = new Processeur("kjbn", "dfkdb", "bknk", "fkvjdb", "kjv nbk", 6, 18, "bkjb", "kjb", "kbdnb", "ffbnf", "kfvjnerk", "56", "456");
             processeurService.add(processeur);
         }
 
-//        Administrateur administrateur;
-//        AdministrateurService administrateurService = MetierFactory.getAdministrateurService();
-//
-//        administrateur = new Administrateur();
-//        administrateur.setLogin("admin");
-//        administrateur.setMdp("admin");
-//        administrateurService.add(administrateur);
+        Ordinateur ordinateur;
+        OrdinateurService ordinateurService = MetierFactory.getOrdinateurService();
+
+        for (int i = 0; i < 1; i++) {
+            Processeur processeur1 = processeurService.getById(1l);
+            Memoire memoire1 = memoireService.getById(1l);
+            HDD hdd1 = hDDService.getById(1l);
+
+            ordinateur = new Ordinateur(processeur1, memoire1, hdd1);
+            ordinateurService.add(ordinateur);
+        }
+
     }
 
 }

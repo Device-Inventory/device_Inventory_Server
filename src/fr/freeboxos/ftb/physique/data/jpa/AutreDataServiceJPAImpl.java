@@ -17,5 +17,4 @@ public class AutreDataServiceJPAImpl extends AbstracCrudServiceJPA<Autre> implem
     public AutreDataServiceJPAImpl(String PU) {
         super(PU);
     }
-
 }

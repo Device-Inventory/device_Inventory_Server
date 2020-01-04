@@ -15,7 +15,6 @@ public class AdministrateurServiceImpl implements AdministrateurService {
     private final AdministrateurDataService administrateurDataService = PhysiqueDataFactory.getAdministrateurDataService();
 
     @Override
-
     public Administrateur add(Administrateur t) throws Exception {
         return this.administrateurDataService.add(t);
     }

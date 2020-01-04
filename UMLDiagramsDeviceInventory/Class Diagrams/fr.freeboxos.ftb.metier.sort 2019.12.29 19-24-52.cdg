@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="fr.freeboxos.ftb.metier.sort">
+  <ClassDiagramComponents>
+    <Class name="ExtractionSort" package="fr.freeboxos.ftb.metier.sort" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="sort" returnType="long" visibility="public">
+          <Argument type="Comparable[]" name="values"/>
+        </Method>
+        <Method name="sort" returnType="long" visibility="public">
+          <Argument type="Object[]" name="values"/>
+          <Argument type="Comparator" name="comparator"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ComparatorByIdCable" package="fr.freeboxos.ftb.metier.sort" visibility="public" xPosition="373.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="compare" returnType="int" visibility="public">
+          <Argument type="Cable" name="o1"/>
+          <Argument type="Cable" name="o2"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ComparatorByIdMemoire" package="fr.freeboxos.ftb.metier.sort" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="compare" returnType="int" visibility="public">
+          <Argument type="Memoire" name="o1"/>
+          <Argument type="Memoire" name="o2"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ComparatorByIdHDD" package="fr.freeboxos.ftb.metier.sort" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="compare" returnType="int" visibility="public">
+          <Argument type="HDD" name="t"/>
+          <Argument type="HDD" name="t1"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ComparatorByIdAutre" package="fr.freeboxos.ftb.metier.sort" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="compare" returnType="int" visibility="public">
+          <Argument type="Autre" name="o1"/>
+          <Argument type="Autre" name="o2"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ComparatorByIdAdministrateur" package="fr.freeboxos.ftb.metier.sort" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="compare" returnType="int" visibility="public">
+          <Argument type="Administrateur" name="o1"/>
+          <Argument type="Administrateur" name="o2"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ComparatorByIdProcesseur" package="fr.freeboxos.ftb.metier.sort" visibility="public" xPosition="1885.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="compare" returnType="int" visibility="public">
+          <Argument type="Processeur" name="o1"/>
+          <Argument type="Processeur" name="o2"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="InsertionOptimisedSort" package="fr.freeboxos.ftb.metier.sort" visibility="public" xPosition="540.0" yPosition="253.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="sort" returnType="long" visibility="public">
+          <Argument type="Comparable[]" name="values"/>
+        </Method>
+        <Method name="sort" returnType="long" visibility="public">
+          <Argument type="Object[]" name="values"/>
+          <Argument type="Comparator" name="comparator"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Sort" package="fr.freeboxos.ftb.metier.sort" visibility="public" isAbstract="true" xPosition="20.0" yPosition="420.0">
+      <Fields>
+        <Field name="start" type="long" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="sort" returnType="long" visibility="public" isAbstract="true">
+          <Argument type="Comparable[]" name="values"/>
+        </Method>
+        <Method name="sort" returnType="long" visibility="public" isAbstract="true">
+          <Argument type="Object[]" name="values"/>
+          <Argument type="Comparator" name="comparator"/>
+        </Method>
+        <Method name="start" returnType="void" visibility="public"/>
+        <Method name="stop" returnType="long" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="BubbleSort" package="fr.freeboxos.ftb.metier.sort" visibility="public" xPosition="734.0" yPosition="486.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="sort" returnType="long" visibility="public">
+          <Argument type="Comparable[]" name="values"/>
+        </Method>
+        <Method name="sort" returnType="long" visibility="public">
+          <Argument type="Object[]" name="values"/>
+          <Argument type="Comparator" name="comparator"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="fr.freeboxos.ftb.metier.sort.ExtractionSort" target="fr.freeboxos.ftb.metier.sort.Sort"/>
+    <IsRelation name="is" source="fr.freeboxos.ftb.metier.sort.InsertionOptimisedSort" target="fr.freeboxos.ftb.metier.sort.Sort"/>
+    <IsRelation name="is" source="fr.freeboxos.ftb.metier.sort.BubbleSort" target="fr.freeboxos.ftb.metier.sort.Sort"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

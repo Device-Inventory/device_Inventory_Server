@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="fr.freeboxos.ftb.metier">
+  <ClassDiagramComponents>
+    <Class name="AdministrateurServiceImpl" package="fr.freeboxos.ftb.metier" visibility="public" xPosition="3336.0" yPosition="900.0">
+      <Fields>
+        <Field name="administrateurDataService" type="AdministrateurDataService" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="add" returnType="Administrateur" visibility="public">
+          <Argument type="Administrateur" name="t"/>
+        </Method>
+        <Method name="remove" returnType="void" visibility="public">
+          <Argument type="Administrateur" name="t"/>
+        </Method>
+        <Method name="update" returnType="void" visibility="public">
+          <Argument type="Administrateur" name="t"/>
+        </Method>
+        <Method name="getById" returnType="Administrateur" visibility="public">
+          <Argument type="Long" name="l"/>
+        </Method>
+        <Method name="getCount" returnType="long" visibility="public"/>
+        <Method name="getAll" returnType="List&lt;Administrateur&gt;" visibility="public"/>
+        <Method name="getAll" returnType="List&lt;Administrateur&gt;" visibility="public">
+          <Argument type="int" name="i"/>
+          <Argument type="int" name="i1"/>
+        </Method>
+        <Method name="getByLogin" returnType="Administrateur" visibility="public">
+          <Argument type="String" name="login"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ProcesseurServiceImpl" package="fr.freeboxos.ftb.metier" visibility="public" xPosition="3006.0" yPosition="900.0">
+      <Fields>
+        <Field name="processeurDataService" type="ProcesseurDataService" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="add" returnType="Processeur" visibility="public">
+          <Argument type="Processeur" name="t"/>
+        </Method>
+        <Method name="remove" returnType="void" visibility="public">
+          <Argument type="Processeur" name="t"/>
+        </Method>
+        <Method name="update" returnType="void" visibility="public">
+          <Argument type="Processeur" name="t"/>
+        </Method>
+        <Method name="getById" returnType="Processeur" visibility="public">
+          <Argument type="Long" name="l"/>
+        </Method>
+        <Method name="getCount" returnType="long" visibility="public"/>
+        <Method name="getAll" returnType="List&lt;Processeur&gt;" visibility="public"/>
+        <Method name="getAll" returnType="List&lt;Processeur&gt;" visibility="public">
+          <Argument type="int" name="i"/>
+          <Argument type="int" name="i1"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="MetierFactory" package="fr.freeboxos.ftb.metier" visibility="public" xPosition="2505.0" yPosition="210.0">
+      <Fields>
+        <Field name="autreService" type="AutreService" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="cableService" type="CableService" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="hddService" type="HDDService" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="memoireService" type="MemoireService" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="processeurService" type="ProcesseurService" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="administrateurService" type="AdministrateurService" visibility="private" isStatic="true" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="private"/>
+      </Constructors>
+      <Methods>
+        <Method name="getAutreService" returnType="AutreService" visibility="public" isStatic="true"/>
+        <Method name="getCableService" returnType="CableService" visibility="public" isStatic="true"/>
+        <Method name="getHDDService" returnType="HDDService" visibility="public" isStatic="true"/>
+        <Method name="getMemoireService" returnType="MemoireService" visibility="public" isStatic="true"/>
+        <Method name="getProcesseurService" returnType="ProcesseurService" visibility="public" isStatic="true"/>
+        <Method name="getAdministrateurService" returnType="AdministrateurService" visibility="public" isStatic="true"/>
+      </Methods>
+    </Class>
+    <Class name="CableServiceRestImpl" package="fr.freeboxos.ftb.metier.rest.server" visibility="public" xPosition="2258.0" yPosition="900.0">
+      <Fields>
+        <Field name="cableService" type="CableService" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="add" returnType="Cable" visibility="public">
+          <Argument type="Cable" name="t"/>
+        </Method>
+        <Method name="remove" returnType="void" visibility="public">
+          <Argument type="Cable" name="t"/>
+        </Method>
+        <Method name="update" returnType="void" visibility="public">
+          <Argument type="Cable" name="t"/>
+        </Method>
+        <Method name="getById" returnType="Cable" visibility="public">
+          <Argument type="Long" name="l"/>
+        </Method>
+        <Method name="getCount" returnType="long" visibility="public"/>
+        <Method name="getAll" returnType="List&lt;Cable&gt;" visibility="public"/>
+        <Method name="getAll" returnType="List&lt;Cable&gt;" visibility="public">
+          <Argument type="int" name="i"/>
+          <Argument type="int" name="i1"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="AutreServiceRestImpl" package="fr.freeboxos.ftb.metier.rest.server" visibility="public" xPosition="1782.0" yPosition="900.0">
+      <Fields>
+        <Field name="autreService" type="AutreService" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="add" returnType="Autre" visibility="public">
+          <Argument type="Autre" name="t"/>
+        </Method>
+        <Method name="remove" returnType="void" visibility="public">
+          <Argument type="Autre" name="t"/>
+        </Method>
+        <Method name="update" returnType="void" visibility="public">
+          <Argument type="Autre" name="t"/>
+        </Method>
+        <Method name="getById" returnType="Autre" visibility="public">
+          <Argument type="Long" name="l"/>
+        </Method>
+        <Method name="getCount" returnType="long" visibility="public"/>
+        <Method name="getAll" returnType="List&lt;Autre&gt;" visibility="public"/>
+        <Method name="getAll" returnType="List&lt;Autre&gt;" visibility="public">
+          <Argument type="int" name="i"/>
+          <Argument type="int" name="i1"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="HDDServiceRestImpl" package="fr.freeboxos.ftb.metier.rest.server" visibility="public" xPosition="1569.0" yPosition="900.0">
+      <Fields>
+        <Field name="hDDService" type="HDDService" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="add" returnType="HDD" visibility="public">
+          <Argument type="HDD" name="t"/>
+        </Method>
+        <Method name="remove" returnType="void" visibility="public">
+          <Argument type="HDD" name="t"/>
+        </Method>
+        <Method name="update" returnType="void" visibility="public">
+          <Argument type="HDD" name="t"/>
+        </Method>
+        <Method name="getById" returnType="HDD" visibility="public">
+          <Argument type="Long" name="l"/>
+        </Method>
+        <Method name="getCount" returnType="long" visibility="public"/>
+        <Method name="getAll" returnType="List&lt;HDD&gt;" visibility="public"/>
+        <Method name="getAll" returnType="List&lt;HDD&gt;" visibility="public">
+          <Argument type="int" name="i"/>
+          <Argument type="int" name="i1"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ProcesseurServiceRestImpl" package="fr.freeboxos.ftb.metier.rest.server" visibility="public" xPosition="2736.0" yPosition="900.0">
+      <Fields>
+        <Field name="processeurService" type="ProcesseurService" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="add" returnType="Processeur" visibility="public">
+          <Argument type="Processeur" name="t"/>
+        </Method>
+        <Method name="remove" returnType="void" visibility="public">
+          <Argument type="Processeur" name="t"/>
+        </Method>
+        <Method name="update" returnType="void" visibility="public">
+          <Argument type="Processeur" name="t"/>
+        </Method>
+        <Method name="getById" returnType="Processeur" visibility="public">
+          <Argument type="Long" name="l"/>
+        </Method>
+        <Method name="getCount" returnType="long" visibility="public"/>
+        <Method name="getAll" returnType="List&lt;Processeur&gt;" visibility="public"/>
+        <Method name="getAll" returnType="List&lt;Processeur&gt;" visibility="public">
+          <Argument type="int" name="i"/>
+          <Argument type="int" name="i1"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="MemoireServiceRestImpl" package="fr.freeboxos.ftb.metier.rest.server" visibility="public" xPosition="1089.0" yPosition="900.0">
+      <Fields>
+        <Field name="memoireService" type="MemoireService" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="add" returnType="Memoire" visibility="public">
+          <Argument type="Memoire" name="t"/>
+        </Method>
+        <Method name="remove" returnType="void" visibility="public">
+          <Argument type="Memoire" name="t"/>
+        </Method>
+        <Method name="update" returnType="void" visibility="public">
+          <Argument type="Memoire" name="t"/>
+        </Method>
+        <Method name="getById" returnType="Memoire" visibility="public">
+          <Argument type="Long" name="l"/>
+        </Method>
+        <Method name="getCount" returnType="long" visibility="public"/>
+        <Method name="getAll" returnType="List&lt;Memoire&gt;" visibility="public"/>
+        <Method name="getAll" returnType="List&lt;Memoire&gt;" visibility="public">
+          <Argument type="int" name="i"/>
+          <Argument type="int" name="i1"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="AdministrateurServiceRestImpl" package="fr.freeboxos.ftb.metier.rest.server" visibility="public" xPosition="3708.0" yPosition="900.0">
+      <Fields>
+        <Field name="administrateurService" type="AdministrateurService" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="add" returnType="Administrateur" visibility="public">
+          <Argument type="Administrateur" name="t"/>
+        </Method>
+        <Method name="remove" returnType="void" visibility="public">
+          <Argument type="Administrateur" name="t"/>
+        </Method>
+        <Method name="update" returnType="void" visibility="public">
+          <Argument type="Administrateur" name="t"/>
+        </Method>
+        <Method name="getById" returnType="Administrateur" visibility="public">
+          <Argument type="Long" name="l"/>
+        </Method>
+        <Method name="getCount" returnType="long" visibility="public"/>
+        <Method name="getAll" returnType="List&lt;Administrateur&gt;" visibility="public"/>
+        <Method name="getAll" returnType="List&lt;Administrateur&gt;" visibility="public">
+          <Argument type="int" name="i"/>
+          <Argument type="int" name="i1"/>
+        </Method>
+        <Method name="getByLogin" returnType="Administrateur" visibility="public">
+          <Argument type="String" name="login"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="HDDServiceImpl" package="fr.freeboxos.ftb.metier" visibility="public" xPosition="1328.0" yPosition="900.0">
+      <Fields>
+        <Field name="hDDDataService" type="HDDDataService" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="add" returnType="HDD" visibility="public">
+          <Argument type="HDD" name="t"/>
+        </Method>
+        <Method name="remove" returnType="void" visibility="public">
+          <Argument type="HDD" name="t"/>
+        </Method>
+        <Method name="update" returnType="void" visibility="public">
+          <Argument type="HDD" name="t"/>
+        </Method>
+        <Method name="getById" returnType="HDD" visibility="public">
+          <Argument type="Long" name="l"/>
+        </Method>
+        <Method name="getCount" returnType="long" visibility="public"/>
+        <Method name="getAll" returnType="List&lt;HDD&gt;" visibility="public"/>
+        <Method name="getAll" returnType="List&lt;HDD&gt;" visibility="public">
+          <Argument type="int" name="i"/>
+          <Argument type="int" name="i1"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="AutreServiceImpl" package="fr.freeboxos.ftb.metier" visibility="public" xPosition="2002.0" yPosition="900.0">
+      <Fields>
+        <Field name="autreDataService" type="AutreDataService" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="add" returnType="Autre" visibility="public">
+          <Argument type="Autre" name="t"/>
+        </Method>
+        <Method name="remove" returnType="void" visibility="public">
+          <Argument type="Autre" name="t"/>
+        </Method>
+        <Method name="update" returnType="void" visibility="public">
+          <Argument type="Autre" name="t"/>
+        </Method>
+        <Method name="getById" returnType="Autre" visibility="public">
+          <Argument type="Long" name="l"/>
+        </Method>
+        <Method name="getCount" returnType="long" visibility="public"/>
+        <Method name="getAll" returnType="List&lt;Autre&gt;" visibility="public"/>
+        <Method name="getAll" returnType="List&lt;Autre&gt;" visibility="public">
+          <Argument type="int" name="i"/>
+          <Argument type="int" name="i1"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="CableServiceImpl" package="fr.freeboxos.ftb.metier" visibility="public" xPosition="2479.0" yPosition="900.0">
+      <Fields>
+        <Field name="cableDataService" type="CableDataService" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="add" returnType="Cable" visibility="public">
+          <Argument type="Cable" name="t"/>
+        </Method>
+        <Method name="remove" returnType="void" visibility="public">
+          <Argument type="Cable" name="t"/>
+        </Method>
+        <Method name="update" returnType="void" visibility="public">
+          <Argument type="Cable" name="t"/>
+        </Method>
+        <Method name="getById" returnType="Cable" visibility="public">
+          <Argument type="Long" name="l"/>
+        </Method>
+        <Method name="getCount" returnType="long" visibility="public"/>
+        <Method name="getAll" returnType="List&lt;Cable&gt;" visibility="public"/>
+        <Method name="getAll" returnType="List&lt;Cable&gt;" visibility="public">
+          <Argument type="int" name="i"/>
+          <Argument type="int" name="i1"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="MemoireServiceImpl" package="fr.freeboxos.ftb.metier" visibility="public" xPosition="794.0" yPosition="900.0">
+      <Fields>
+        <Field name="memoireDataService" type="MemoireDataService" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="add" returnType="Memoire" visibility="public">
+          <Argument type="Memoire" name="t"/>
+        </Method>
+        <Method name="remove" returnType="void" visibility="public">
+          <Argument type="Memoire" name="t"/>
+        </Method>
+        <Method name="update" returnType="void" visibility="public">
+          <Argument type="Memoire" name="t"/>
+        </Method>
+        <Method name="getById" returnType="Memoire" visibility="public">
+          <Argument type="Long" name="l"/>
+        </Method>
+        <Method name="getCount" returnType="long" visibility="public"/>
+        <Method name="getAll" returnType="List&lt;Memoire&gt;" visibility="public"/>
+        <Method name="getAll" returnType="List&lt;Memoire&gt;" visibility="public">
+          <Argument type="int" name="i"/>
+          <Argument type="int" name="i1"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="HDDService" package="fr.freeboxos.ftb.metier" visibility="public" xPosition="1463.0" yPosition="742.0">
+      <Methods/>
+    </Interface>
+    <Interface name="CableService" package="fr.freeboxos.ftb.metier" visibility="public" xPosition="2377.0" yPosition="742.0">
+      <Methods/>
+    </Interface>
+    <Interface name="AdministrateurService" package="fr.freeboxos.ftb.metier" visibility="public" xPosition="3561.0" yPosition="658.0">
+      <Methods>
+        <Method name="getByLogin" returnType="Administrateur" visibility="public">
+          <Argument type="String" name="login"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="ProcesseurService" package="fr.freeboxos.ftb.metier" visibility="public" xPosition="2905.0" yPosition="697.0">
+      <Methods/>
+    </Interface>
+    <Interface name="AutreService" package="fr.freeboxos.ftb.metier" visibility="public" xPosition="1903.0" yPosition="753.0">
+      <Methods/>
+    </Interface>
+    <Interface name="MemoireService" package="fr.freeboxos.ftb.metier" visibility="public" xPosition="1002.0" yPosition="724.0">
+      <Methods/>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="fr.freeboxos.ftb.metier.CableServiceImpl" target="fr.freeboxos.ftb.metier.CableService"/>
+    <HasRelation name="hDDService" source="fr.freeboxos.ftb.metier.rest.server.HDDServiceRestImpl" target="fr.freeboxos.ftb.metier.HDDService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="fr.freeboxos.ftb.metier.MetierFactory" target="fr.freeboxos.ftb.metier.AdministrateurService" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="processeurService" source="fr.freeboxos.ftb.metier.MetierFactory" target="fr.freeboxos.ftb.metier.ProcesseurService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="fr.freeboxos.ftb.metier.MemoireServiceImpl" target="fr.freeboxos.ftb.metier.MemoireService"/>
+    <HasRelation name="administrateurService" source="fr.freeboxos.ftb.metier.rest.server.AdministrateurServiceRestImpl" target="fr.freeboxos.ftb.metier.AdministrateurService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="autreService" source="fr.freeboxos.ftb.metier.MetierFactory" target="fr.freeboxos.ftb.metier.AutreService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="fr.freeboxos.ftb.metier.HDDServiceImpl" target="fr.freeboxos.ftb.metier.HDDService"/>
+    <HasRelation name="autreService" source="fr.freeboxos.ftb.metier.rest.server.AutreServiceRestImpl" target="fr.freeboxos.ftb.metier.AutreService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="hddService" source="fr.freeboxos.ftb.metier.MetierFactory" target="fr.freeboxos.ftb.metier.HDDService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="fr.freeboxos.ftb.metier.AutreServiceImpl" target="fr.freeboxos.ftb.metier.AutreService"/>
+    <HasRelation name="memoireService" source="fr.freeboxos.ftb.metier.MetierFactory" target="fr.freeboxos.ftb.metier.MemoireService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="cableService" source="fr.freeboxos.ftb.metier.rest.server.CableServiceRestImpl" target="fr.freeboxos.ftb.metier.CableService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="processeurService" source="fr.freeboxos.ftb.metier.rest.server.ProcesseurServiceRestImpl" target="fr.freeboxos.ftb.metier.ProcesseurService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="fr.freeboxos.ftb.metier.MetierFactory" target="fr.freeboxos.ftb.metier.HDDService" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="fr.freeboxos.ftb.metier.MetierFactory" target="fr.freeboxos.ftb.metier.ProcesseurService" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="fr.freeboxos.ftb.metier.AdministrateurServiceImpl" target="fr.freeboxos.ftb.metier.AdministrateurService"/>
+    <UseRelation source="fr.freeboxos.ftb.metier.MetierFactory" target="fr.freeboxos.ftb.metier.AutreService" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="fr.freeboxos.ftb.metier.MetierFactory" target="fr.freeboxos.ftb.metier.CableService" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="cableService" source="fr.freeboxos.ftb.metier.MetierFactory" target="fr.freeboxos.ftb.metier.CableService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="administrateurService" source="fr.freeboxos.ftb.metier.MetierFactory" target="fr.freeboxos.ftb.metier.AdministrateurService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="fr.freeboxos.ftb.metier.MetierFactory" target="fr.freeboxos.ftb.metier.MemoireService" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="memoireService" source="fr.freeboxos.ftb.metier.rest.server.MemoireServiceRestImpl" target="fr.freeboxos.ftb.metier.MemoireService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="fr.freeboxos.ftb.metier.ProcesseurServiceImpl" target="fr.freeboxos.ftb.metier.ProcesseurService"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

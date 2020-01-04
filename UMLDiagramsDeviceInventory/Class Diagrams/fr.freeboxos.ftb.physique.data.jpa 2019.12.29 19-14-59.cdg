@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="fr.freeboxos.ftb.physique.data.jpa">
+  <ClassDiagramComponents>
+    <Class name="CableDataServiceJPAImpl" package="fr.freeboxos.ftb.physique.data.jpa" visibility="public" xPosition="1773.0" yPosition="612.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="PU"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="ProcesseurDataServiceJPAImpl" package="fr.freeboxos.ftb.physique.data.jpa" visibility="public" xPosition="624.0" yPosition="627.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="PU"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="PhysiqueDataFactory" package="fr.freeboxos.ftb.physique.data.jpa" visibility="public" xPosition="1108.0" yPosition="106.0">
+      <Fields>
+        <Field name="PU" type="String" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="autreDataService" type="AutreDataService" visibility="private" isStatic="true"/>
+        <Field name="cableDataService" type="CableDataService" visibility="private" isStatic="true"/>
+        <Field name="hddDataService" type="HDDDataService" visibility="private" isStatic="true"/>
+        <Field name="memoireDataService" type="MemoireDataService" visibility="private" isStatic="true"/>
+        <Field name="processeurDataService" type="ProcesseurDataService" visibility="private" isStatic="true"/>
+        <Field name="administateurDataService" type="AdministrateurDataService" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getAutreDataService" returnType="AutreDataService" visibility="public" isStatic="true"/>
+        <Method name="getCableDataService" returnType="CableDataService" visibility="public" isStatic="true"/>
+        <Method name="getHDDDataService" returnType="HDDDataService" visibility="public" isStatic="true"/>
+        <Method name="getMemoireDataService" returnType="MemoireDataService" visibility="public" isStatic="true"/>
+        <Method name="getProcesseurDataService" returnType="ProcesseurDataService" visibility="public" isStatic="true"/>
+        <Method name="getAdministrateurDataService" returnType="AdministrateurDataService" visibility="public" isStatic="true"/>
+      </Methods>
+    </Class>
+    <Class name="AutreDataServiceJPAImpl" package="fr.freeboxos.ftb.physique.data.jpa" visibility="public" xPosition="1363.0" yPosition="898.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="PU"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="AdministrateurDataServiceJPAImpl" package="fr.freeboxos.ftb.physique.data.jpa" visibility="public" xPosition="998.0" yPosition="761.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="PU"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getByLogin" returnType="Administrateur" visibility="public">
+          <Argument type="String" name="login"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="MemoireDataServiceJPAImpl" package="fr.freeboxos.ftb.physique.data.jpa" visibility="public" xPosition="1773.0" yPosition="310.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="PU"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="HDDDataServiceJPAImpl" package="fr.freeboxos.ftb.physique.data.jpa" visibility="public" xPosition="646.0" yPosition="292.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="PU"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Interface name="HDDDataService" package="fr.freeboxos.ftb.physique.data.jpa" visibility="public" xPosition="691.0" yPosition="140.0">
+      <Methods/>
+    </Interface>
+    <Interface name="CableDataService" package="fr.freeboxos.ftb.physique.data.jpa" visibility="public" xPosition="1532.0" yPosition="627.0">
+      <Methods/>
+    </Interface>
+    <Interface name="AutreDataService" package="fr.freeboxos.ftb.physique.data.jpa" visibility="public" xPosition="1408.0" yPosition="761.0">
+      <Methods/>
+    </Interface>
+    <Interface name="ProcesseurDataService" package="fr.freeboxos.ftb.physique.data.jpa" visibility="public" xPosition="668.0" yPosition="484.0">
+      <Methods/>
+    </Interface>
+    <Interface name="AdministrateurDataService" package="fr.freeboxos.ftb.physique.data.jpa" visibility="public" xPosition="1015.0" yPosition="595.0">
+      <Methods>
+        <Method name="getByLogin" returnType="Administrateur" visibility="public">
+          <Argument type="String" name="login"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="MemoireDataService" package="fr.freeboxos.ftb.physique.data.jpa" visibility="public" xPosition="1817.0" yPosition="158.0">
+      <Methods/>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="fr.freeboxos.ftb.physique.data.jpa.AutreDataServiceJPAImpl" target="fr.freeboxos.ftb.physique.data.jpa.AutreDataService"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="fr.freeboxos.ftb.physique.data.jpa.ProcesseurDataServiceJPAImpl" target="fr.freeboxos.ftb.physique.data.jpa.ProcesseurDataService"/>
+    <UseRelation source="fr.freeboxos.ftb.physique.data.jpa.PhysiqueDataFactory" target="fr.freeboxos.ftb.physique.data.jpa.CableDataService" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="fr.freeboxos.ftb.physique.data.jpa.PhysiqueDataFactory" target="fr.freeboxos.ftb.physique.data.jpa.ProcesseurDataService" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="fr.freeboxos.ftb.physique.data.jpa.CableDataServiceJPAImpl" target="fr.freeboxos.ftb.physique.data.jpa.CableDataService"/>
+    <HasRelation name="autreDataService" source="fr.freeboxos.ftb.physique.data.jpa.PhysiqueDataFactory" target="fr.freeboxos.ftb.physique.data.jpa.AutreDataService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="cableDataService" source="fr.freeboxos.ftb.physique.data.jpa.PhysiqueDataFactory" target="fr.freeboxos.ftb.physique.data.jpa.CableDataService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="fr.freeboxos.ftb.physique.data.jpa.PhysiqueDataFactory" target="fr.freeboxos.ftb.physique.data.jpa.AdministrateurDataService" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="fr.freeboxos.ftb.physique.data.jpa.AdministrateurDataServiceJPAImpl" target="fr.freeboxos.ftb.physique.data.jpa.AdministrateurDataService"/>
+    <HasRelation name="administateurDataService" source="fr.freeboxos.ftb.physique.data.jpa.PhysiqueDataFactory" target="fr.freeboxos.ftb.physique.data.jpa.AdministrateurDataService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="memoireDataService" source="fr.freeboxos.ftb.physique.data.jpa.PhysiqueDataFactory" target="fr.freeboxos.ftb.physique.data.jpa.MemoireDataService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="processeurDataService" source="fr.freeboxos.ftb.physique.data.jpa.PhysiqueDataFactory" target="fr.freeboxos.ftb.physique.data.jpa.ProcesseurDataService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="fr.freeboxos.ftb.physique.data.jpa.MemoireDataServiceJPAImpl" target="fr.freeboxos.ftb.physique.data.jpa.MemoireDataService"/>
+    <HasRelation name="hddDataService" source="fr.freeboxos.ftb.physique.data.jpa.PhysiqueDataFactory" target="fr.freeboxos.ftb.physique.data.jpa.HDDDataService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="fr.freeboxos.ftb.physique.data.jpa.PhysiqueDataFactory" target="fr.freeboxos.ftb.physique.data.jpa.HDDDataService" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="fr.freeboxos.ftb.physique.data.jpa.PhysiqueDataFactory" target="fr.freeboxos.ftb.physique.data.jpa.AutreDataService" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="fr.freeboxos.ftb.physique.data.jpa.HDDDataServiceJPAImpl" target="fr.freeboxos.ftb.physique.data.jpa.HDDDataService"/>
+    <UseRelation source="fr.freeboxos.ftb.physique.data.jpa.PhysiqueDataFactory" target="fr.freeboxos.ftb.physique.data.jpa.MemoireDataService" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
