@@ -93,7 +93,7 @@ public class TestServer {
             Memoire memoire1 = memoireService.getById(1l);
             HDD hdd1 = hDDService.getById(1l);
 
-            ordinateur = new Ordinateur(processeur1, memoire1, hdd1);
+            ordinateur = new Ordinateur(false, processeur1, memoire1, hdd1);
             ordinateurService.add(ordinateur);
         }
 

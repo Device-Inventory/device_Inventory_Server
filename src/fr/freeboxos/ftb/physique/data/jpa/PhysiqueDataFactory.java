@@ -102,4 +102,13 @@ public class PhysiqueDataFactory {
 
         return ordinateurDataService;
     }
+
+    private static CarteGraphiqueDataService carteGraphiqueDataService = null;
+
+    public static CarteGraphiqueDataService getCarteGraphiqueDataService() {
+        if (carteGraphiqueDataService == null) {
+            carteGraphiqueDataService = new CarteGraphiqueDataServiceJPAImpl(PU);
+        }
+        return carteGraphiqueDataService;
+    }
 }

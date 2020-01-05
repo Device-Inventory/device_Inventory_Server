@@ -53,6 +53,12 @@ public class MetierFactory {
         return ORDINATEUR_SERVICE;
     }
 
+    private static final CarteGraphiqueService CARTE_GRAPHIQUE_SERVICE = new CarteGraphiqueServiceImpl();
+
+    public static CarteGraphiqueService getCarteGraphiqueService() {
+        return CARTE_GRAPHIQUE_SERVICE;
+    }
+
     private MetierFactory() {
     }
 }
