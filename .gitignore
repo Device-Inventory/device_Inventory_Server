@@ -23,15 +23,15 @@ hs_err_pid*
 
 #PU
 persistence.xml
-/nbproject/private/
-/build/
-/JsfJpaCrud/nbproject/private/
-/dist/
-/JsfJpaCrud/build/
-/FileUpload/target/
-/ResponsiveRabbits/nbproject/private/
-/Test/nbproject/private/
-/Test/build/
-/WebApplication1/nbproject/private/
-/WebApplication1/build/
-/WebApplication1/dist/
+nbproject/private/
+build/
+JsfJpaCrud/nbproject/private/
+dist/
+JsfJpaCrud/build/
+FileUpload/target/
+ResponsiveRabbits/nbproject/private/
+Test/nbproject/private/
+Test/build/
+WebApplication1/nbproject/private/
+WebApplication1/build/
+WebApplication1/dist/
