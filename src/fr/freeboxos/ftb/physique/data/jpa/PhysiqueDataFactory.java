@@ -111,4 +111,13 @@ public class PhysiqueDataFactory {
         }
         return carteGraphiqueDataService;
     }
+
+    private static CarteMereDataService carteMereDataService = null;
+
+    public static CarteMereDataService getCarteMereDataService() {
+        if (carteMereDataService == null) {
+            carteMereDataService = new CarteMereDataServiceJPAImpl(PU);
+        }
+        return carteMereDataService;
+    }
 }

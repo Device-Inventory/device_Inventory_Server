@@ -6,7 +6,6 @@
 package fr.freeboxos.ftb.metier;
 
 import fr.freeboxos.ftb.metier.entitys.Administrateur;
-import java.util.List;
 import lml.persistence.CrudService;
 
 /**
