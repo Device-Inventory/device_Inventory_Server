@@ -5,6 +5,9 @@
  */
 package fr.freeboxos.ftb.physique.data.jpa;
 
+import fr.freeboxos.ftb.physique.data.jpa.config.ConfigMarqueCpuDataService;
+import fr.freeboxos.ftb.physique.data.jpa.config.ConfigMarqueCpuDataServiceJPAImpl;
+
 /**
  * Physique data factory permet de créer les objets de chaque entités.
  *
@@ -119,5 +122,14 @@ public class PhysiqueDataFactory {
             carteMereDataService = new CarteMereDataServiceJPAImpl(PU);
         }
         return carteMereDataService;
+    }
+
+    private static ConfigMarqueCpuDataService configMarqueCpuService = null;
+
+    public static ConfigMarqueCpuDataService getConfigMarqueCpuDataService() {
+        if (configMarqueCpuService == null) {
+            configMarqueCpuService = new ConfigMarqueCpuDataServiceJPAImpl(PU);
+        }
+        return configMarqueCpuService;
     }
 }
