@@ -6,7 +6,7 @@
 package fr.freeboxos.ftb.metier;
 
 import fr.freeboxos.ftb.metier.entitys.Processeur;
-import fr.freeboxos.ftb.physique.data.jpa.PhysiqueDataFactory;
+import fr.freeboxos.ftb.physique.PhysiqueDataFactory;
 import fr.freeboxos.ftb.physique.data.jpa.ProcesseurDataService;
 import java.util.List;
 

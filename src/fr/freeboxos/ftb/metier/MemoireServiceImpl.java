@@ -7,7 +7,7 @@ package fr.freeboxos.ftb.metier;
 
 import fr.freeboxos.ftb.metier.entitys.Memoire;
 import fr.freeboxos.ftb.physique.data.jpa.MemoireDataService;
-import fr.freeboxos.ftb.physique.data.jpa.PhysiqueDataFactory;
+import fr.freeboxos.ftb.physique.PhysiqueDataFactory;
 import java.util.List;
 
 /**

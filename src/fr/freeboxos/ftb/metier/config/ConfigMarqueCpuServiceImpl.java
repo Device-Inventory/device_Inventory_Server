@@ -17,7 +17,7 @@
 package fr.freeboxos.ftb.metier.config;
 
 import fr.freeboxos.ftb.metier.entitys.config.ConfigMarqueCpu;
-import fr.freeboxos.ftb.physique.data.jpa.PhysiqueDataFactory;
+import fr.freeboxos.ftb.physique.PhysiqueDataFactory;
 import fr.freeboxos.ftb.physique.data.jpa.config.ConfigMarqueCpuDataService;
 import java.util.List;
 

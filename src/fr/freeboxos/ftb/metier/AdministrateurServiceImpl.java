@@ -7,7 +7,7 @@ package fr.freeboxos.ftb.metier;
 
 import fr.freeboxos.ftb.metier.entitys.Administrateur;
 import fr.freeboxos.ftb.physique.data.jpa.AdministrateurDataService;
-import fr.freeboxos.ftb.physique.data.jpa.PhysiqueDataFactory;
+import fr.freeboxos.ftb.physique.PhysiqueDataFactory;
 import java.util.List;
 
 public class AdministrateurServiceImpl implements AdministrateurService {

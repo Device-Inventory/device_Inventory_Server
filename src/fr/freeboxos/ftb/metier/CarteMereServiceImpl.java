@@ -18,7 +18,7 @@ package fr.freeboxos.ftb.metier;
 
 import fr.freeboxos.ftb.metier.entitys.CarteMere;
 import fr.freeboxos.ftb.physique.data.jpa.CarteMereDataService;
-import fr.freeboxos.ftb.physique.data.jpa.PhysiqueDataFactory;
+import fr.freeboxos.ftb.physique.PhysiqueDataFactory;
 import java.util.List;
 
 /**

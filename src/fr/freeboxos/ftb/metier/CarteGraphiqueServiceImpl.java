@@ -18,7 +18,7 @@ package fr.freeboxos.ftb.metier;
 
 import fr.freeboxos.ftb.metier.entitys.CarteGraphique;
 import fr.freeboxos.ftb.physique.data.jpa.CarteGraphiqueDataService;
-import fr.freeboxos.ftb.physique.data.jpa.PhysiqueDataFactory;
+import fr.freeboxos.ftb.physique.PhysiqueDataFactory;
 import java.util.List;
 
 public class CarteGraphiqueServiceImpl implements CarteGraphiqueService {

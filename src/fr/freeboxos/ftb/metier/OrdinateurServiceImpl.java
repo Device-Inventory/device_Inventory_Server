@@ -21,7 +21,7 @@ import fr.freeboxos.ftb.metier.entitys.Memoire;
 import fr.freeboxos.ftb.metier.entitys.Ordinateur;
 import fr.freeboxos.ftb.metier.entitys.Processeur;
 import fr.freeboxos.ftb.physique.data.jpa.OrdinateurDataService;
-import fr.freeboxos.ftb.physique.data.jpa.PhysiqueDataFactory;
+import fr.freeboxos.ftb.physique.PhysiqueDataFactory;
 import java.util.List;
 
 public class OrdinateurServiceImpl implements OrdinateurService {
