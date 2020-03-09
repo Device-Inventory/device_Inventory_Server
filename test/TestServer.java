@@ -112,10 +112,8 @@ public class TestServer {
         ConfigMarqueCpu configMarqueCpu;
         ConfigMarqueCpuService configMarqueCpuService = MetierFactory.getConfigMarqueCpuService();
 
-        for (int i = 0; i < 10; i++) {
-            configMarqueCpu = new ConfigMarqueCpu("amd");
-            configMarqueCpuService.add(configMarqueCpu);
-        }
+        configMarqueCpu = new ConfigMarqueCpu("amd");
+        configMarqueCpuService.add(configMarqueCpu);
 
     }
 
