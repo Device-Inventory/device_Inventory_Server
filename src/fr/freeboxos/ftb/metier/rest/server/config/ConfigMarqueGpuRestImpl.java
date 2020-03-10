@@ -16,10 +16,70 @@
  */
 package fr.freeboxos.ftb.metier.rest.server.config;
 
+import fr.freeboxos.ftb.metier.MetierFactory;
+import fr.freeboxos.ftb.metier.config.ConfigMarqueGpuService;
+import fr.freeboxos.ftb.metier.entitys.config.ConfigMarqueGpu;
+import java.util.List;
+import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+
 /**
  *
  * @author alan
  */
+@Path("/ConfigMarqueGpuService")
+@Consumes("application/json")
+@Produces("application/json")
 public class ConfigMarqueGpuRestImpl {
+
+    private final ConfigMarqueGpuService configMarqueGpuService = MetierFactory.getConfigMarqueGpuService();
+
+    @POST
+    @Path("/")
+    public ConfigMarqueGpu add(ConfigMarqueGpu t) throws Exception {
+        return configMarqueGpuService.add(t);
+    }
+
+    @DELETE
+    @Path("/")
+    public void remove(ConfigMarqueGpu t) throws Exception {
+        configMarqueGpuService.remove(t);
+    }
+
+    @PUT
+    @Path("/")
+    public void update(ConfigMarqueGpu t) throws Exception {
+        configMarqueGpuService.update(t);
+    }
+
+    @GET
+    @Path("/{id}")
+    public ConfigMarqueGpu getById(@PathParam("id") Long l) throws Exception {
+        return configMarqueGpuService.getById(l);
+    }
+
+    @GET
+    @Path("/Count")
+    public long getCount() throws Exception {
+        return configMarqueGpuService.getCount();
+    }
+
+    @GET
+    @Path("/")
+    public List<ConfigMarqueGpu> getAll() throws Exception {
+        return configMarqueGpuService.getAll();
+    }
+
+    @GET
+    @Path("/{i}/{i1}")
+    public List<ConfigMarqueGpu> getAll(@PathParam("i") int i, @PathParam("i1") int i1) throws Exception {
+        return configMarqueGpuService.getAll(i, i1);
+    }
 
 }

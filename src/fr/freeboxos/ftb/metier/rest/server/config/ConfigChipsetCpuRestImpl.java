@@ -16,10 +16,70 @@
  */
 package fr.freeboxos.ftb.metier.rest.server.config;
 
+import fr.freeboxos.ftb.metier.MetierFactory;
+import fr.freeboxos.ftb.metier.config.ConfigChipsetCpuService;
+import fr.freeboxos.ftb.metier.entitys.config.ConfigChipsetCpu;
+import java.util.List;
+import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+
 /**
  *
  * @author alan
  */
+@Path("/ConfigChipsetCpuService")
+@Consumes("application/json")
+@Produces("application/json")
 public class ConfigChipsetCpuRestImpl {
+
+    private final ConfigChipsetCpuService configChipsetCpuService = MetierFactory.getConfigChipsetCpuService();
+
+    @POST
+    @Path("/")
+    public ConfigChipsetCpu add(ConfigChipsetCpu t) throws Exception {
+        return configChipsetCpuService.add(t);
+    }
+
+    @DELETE
+    @Path("/")
+    public void remove(ConfigChipsetCpu t) throws Exception {
+        configChipsetCpuService.remove(t);
+    }
+
+    @PUT
+    @Path("/")
+    public void update(ConfigChipsetCpu t) throws Exception {
+        configChipsetCpuService.update(t);
+    }
+
+    @GET
+    @Path("/{id}")
+    public ConfigChipsetCpu getById(@PathParam("id") Long l) throws Exception {
+        return configChipsetCpuService.getById(l);
+    }
+
+    @GET
+    @Path("/Count")
+    public long getCount() throws Exception {
+        return configChipsetCpuService.getCount();
+    }
+
+    @GET
+    @Path("/")
+    public List<ConfigChipsetCpu> getAll() throws Exception {
+        return configChipsetCpuService.getAll();
+    }
+
+    @GET
+    @Path("/{i}/{i1}")
+    public List<ConfigChipsetCpu> getAll(@PathParam("i") int i, @PathParam("i1") int i1) throws Exception {
+        return configChipsetCpuService.getAll(i, i1);
+    }
 
 }

@@ -21,7 +21,12 @@ import fr.freeboxos.ftb.metier.config.ConfigTypeCableService;
 import fr.freeboxos.ftb.metier.entitys.config.ConfigTypeCable;
 import java.util.List;
 import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 
 /**
@@ -35,31 +40,45 @@ public class ConfigTypeCableRestImpl {
 
     private final ConfigTypeCableService configTypeCableService = MetierFactory.getConfigTypeCableService();
 
+    @POST
+    @Path("/")
     public ConfigTypeCable add(ConfigTypeCable t) throws Exception {
         return configTypeCableService.add(t);
     }
 
+    @DELETE
+    @Path("/")
     public void remove(ConfigTypeCable t) throws Exception {
         configTypeCableService.remove(t);
     }
 
+    @PUT
+    @Path("/")
     public void update(ConfigTypeCable t) throws Exception {
         configTypeCableService.update(t);
     }
 
-    public ConfigTypeCable getById(Long l) throws Exception {
+    @GET
+    @Path("/{id}")
+    public ConfigTypeCable getById(@PathParam("id") Long l) throws Exception {
         return configTypeCableService.getById(l);
     }
 
+    @GET
+    @Path("/Count")
     public long getCount() throws Exception {
         return configTypeCableService.getCount();
     }
 
+    @GET
+    @Path("/")
     public List<ConfigTypeCable> getAll() throws Exception {
         return configTypeCableService.getAll();
     }
 
-    public List<ConfigTypeCable> getAll(int i, int i1) throws Exception {
+    @GET
+    @Path("/{i}/{i1}")
+    public List<ConfigTypeCable> getAll(@PathParam("i") int i, @PathParam("i1") int i1) throws Exception {
         return configTypeCableService.getAll(i, i1);
     }
 
