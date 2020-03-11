@@ -15,8 +15,7 @@ import fr.freeboxos.ftb.physique.data.jpa.CarteGraphiqueDataService;
 import fr.freeboxos.ftb.physique.data.jpa.CarteGraphiqueDataServiceJPAImpl;
 import fr.freeboxos.ftb.physique.data.jpa.CarteMereDataService;
 import fr.freeboxos.ftb.physique.data.jpa.CarteMereDataServiceJPAImpl;
-import fr.freeboxos.ftb.physique.data.jpa.HDDDataService;
-import fr.freeboxos.ftb.physique.data.jpa.HDDDataServiceJPAImpl;
+import fr.freeboxos.ftb.physique.data.jpa.HddDataServiceJPAImpl;
 import fr.freeboxos.ftb.physique.data.jpa.MemoireDataService;
 import fr.freeboxos.ftb.physique.data.jpa.MemoireDataServiceJPAImpl;
 import fr.freeboxos.ftb.physique.data.jpa.OrdinateurDataService;
@@ -47,6 +46,7 @@ import fr.freeboxos.ftb.physique.data.jpa.config.ConfigTypeMemoireDataService;
 import fr.freeboxos.ftb.physique.data.jpa.config.ConfigTypeMemoireDataServiceJPAImpl;
 import fr.freeboxos.ftb.physique.data.jpa.config.ConfigTypeSsdDataService;
 import fr.freeboxos.ftb.physique.data.jpa.config.ConfigTypeSsdDataServiceJPAImpl;
+import fr.freeboxos.ftb.physique.data.jpa.HddDataService;
 
 /**
  * Physique data factory permet de créer les objets de chaque entités.
@@ -83,15 +83,15 @@ public class PhysiqueDataFactory {
         return cableDataService;
     }
 
-    private static HDDDataService hddDataService = null;
+    private static HddDataService hddDataService = null;
 
     /**
      *
      * @return hddDataService
      */
-    public static HDDDataService getHDDDataService() {
+    public static HddDataService getHDDDataService() {
         if (hddDataService == null) {
-            hddDataService = new HDDDataServiceJPAImpl(PU);
+            hddDataService = new HddDataServiceJPAImpl(PU);
         }
         return hddDataService;
     }

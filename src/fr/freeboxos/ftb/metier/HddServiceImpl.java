@@ -6,17 +6,17 @@
 package fr.freeboxos.ftb.metier;
 
 import fr.freeboxos.ftb.metier.entitys.HDD;
-import fr.freeboxos.ftb.physique.data.jpa.HDDDataService;
 import fr.freeboxos.ftb.physique.PhysiqueDataFactory;
+import fr.freeboxos.ftb.physique.data.jpa.HddDataService;
 import java.util.List;
 
 /**
  *
  * @author alan
  */
-public class HDDServiceImpl implements HDDService {
+public class HddServiceImpl implements HddService {
 
-    private final HDDDataService hDDDataService = PhysiqueDataFactory.getHDDDataService();
+    private final HddDataService hDDDataService = PhysiqueDataFactory.getHDDDataService();
 
     @Override
     public HDD add(HDD t) throws Exception {

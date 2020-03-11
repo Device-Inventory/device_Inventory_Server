@@ -13,13 +13,13 @@ import lml.persistence.jpa.AbstracCrudServiceJPA;
  *
  * @author alan
  */
-public class HDDDataServiceJPAImpl extends AbstracCrudServiceJPA<HDD> implements HDDDataService {
+public class HddDataServiceJPAImpl extends AbstracCrudServiceJPA<HDD> implements HddDataService {
 
     /**
      *
      * @param PU Nom du persistence unit.
      */
-    public HDDDataServiceJPAImpl(String PU) {
+    public HddDataServiceJPAImpl(String PU) {
         super(PU);
     }
 

@@ -3,16 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package fr.freeboxos.ftb.physique.data.jpa;
+package fr.freeboxos.ftb.metier;
 
 import fr.freeboxos.ftb.metier.entitys.HDD;
 import lml.persistence.CrudService;
 
 /**
- * Déclaration abstraite des methodes de l'entité disque dur.
  *
  * @author alan
  */
-public interface HDDDataService extends CrudService<HDD> {
+public interface HddService extends CrudService<HDD> {
 
 }

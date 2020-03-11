@@ -1,7 +1,6 @@
 
 import fr.freeboxos.ftb.metier.AutreService;
 import fr.freeboxos.ftb.metier.CableService;
-import fr.freeboxos.ftb.metier.HDDService;
 import fr.freeboxos.ftb.metier.MemoireService;
 import fr.freeboxos.ftb.metier.MetierFactory;
 import fr.freeboxos.ftb.metier.OrdinateurService;
@@ -15,6 +14,7 @@ import fr.freeboxos.ftb.metier.entitys.Ordinateur;
 import fr.freeboxos.ftb.metier.entitys.Processeur;
 import fr.freeboxos.ftb.metier.entitys.SSD;
 import fr.freeboxos.ftb.metier.entitys.config.ConfigMarqueCpu;
+import fr.freeboxos.ftb.metier.HddService;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -56,7 +56,7 @@ public class TestServer {
 
         //create hdd
         HDD hdd;
-        HDDService hDDService = MetierFactory.getHDDService();
+        HddService hDDService = MetierFactory.getHDDService();
 
         for (int i = 0; i < 10; i++) {
             hdd = new HDD("Seagate", "ABC", "SATA", "1.5", "1To", "7200", "64", "50");
