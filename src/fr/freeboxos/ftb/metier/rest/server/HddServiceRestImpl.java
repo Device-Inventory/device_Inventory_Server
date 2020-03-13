@@ -5,6 +5,7 @@
  */
 package fr.freeboxos.ftb.metier.rest.server;
 
+import fr.freeboxos.ftb.metier.HddService;
 import fr.freeboxos.ftb.metier.MetierFactory;
 import fr.freeboxos.ftb.metier.entitys.HDD;
 import java.util.List;
@@ -16,13 +17,12 @@ import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
-import fr.freeboxos.ftb.metier.HddService;
 
 /**
  *
  * @author alan
  */
-@Path("/HDDService")
+@Path("/HddService")
 @Consumes("application/json")
 @Produces("application/json")
 public class HddServiceRestImpl {
