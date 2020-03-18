@@ -64,4 +64,9 @@ public class ConfigFormatCarteMereServiceImpl implements ConfigFormatCarteMereSe
         return this.configFormatCarteMereDataService.getAll(i, i1);
     }
 
+    @Override
+    public ConfigFormatCarteMere getByFormatCarteMere(String format) throws Exception {
+        return this.configFormatCarteMereDataService.getByFormatCarteMere(format);
+    }
+
 }

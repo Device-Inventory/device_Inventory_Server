@@ -17,6 +17,7 @@
 package fr.freeboxos.ftb.physique.data.jpa.config;
 
 import fr.freeboxos.ftb.metier.entitys.config.ConfigMarqueGpu;
+import javax.persistence.Query;
 import lml.persistence.jpa.AbstracCrudServiceJPA;
 
 /**
@@ -27,6 +28,21 @@ public class ConfigMarqueGpuDataServiceJPAImpl extends AbstracCrudServiceJPA<Con
 
     public ConfigMarqueGpuDataServiceJPAImpl(String PU) {
         super(PU);
+    }
+
+    @Override
+    public ConfigMarqueGpu getByMarqueGpu(String s) throws Exception {
+        ConfigMarqueGpu cmcm = null;
+        try {
+            this.open();
+            Query query = em.createQuery("SELECT cmcm FROM ConfigMarqueGpu cmcm WHERE cmcm.marqueGpu = :fmarque");
+            query.setParameter("fmarque", s);
+            cmcm = (ConfigMarqueGpu) query.getSingleResult();
+        } catch (Exception e) {
+        } finally {
+            this.close();
+        }
+        return cmcm;
     }
 
 }

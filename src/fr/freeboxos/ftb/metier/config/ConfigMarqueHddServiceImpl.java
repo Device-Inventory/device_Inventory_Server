@@ -64,4 +64,9 @@ public class ConfigMarqueHddServiceImpl implements ConfigMarqueHddService {
         return this.configMarqueHddDataService.getAll(i, i1);
     }
 
+    @Override
+    public ConfigMarqueHdd getByMarqueHdd(String s) throws Exception {
+        return this.configMarqueHddDataService.getByMarqueHdd(s);
+    }
+
 }

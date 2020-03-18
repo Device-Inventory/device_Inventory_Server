@@ -17,6 +17,7 @@
 package fr.freeboxos.ftb.physique.data.jpa.config;
 
 import fr.freeboxos.ftb.metier.entitys.config.ConfigTypeCable;
+import javax.persistence.Query;
 import lml.persistence.jpa.AbstracCrudServiceJPA;
 
 /**
@@ -27,6 +28,21 @@ public class ConfigTypeCableDataServiceJPAImpl extends AbstracCrudServiceJPA<Con
 
     public ConfigTypeCableDataServiceJPAImpl(String PU) {
         super(PU);
+    }
+
+    @Override
+    public ConfigTypeCable getByTypeCable(String s) throws Exception {
+        ConfigTypeCable cmcm = null;
+        try {
+            this.open();
+            Query query = em.createQuery("SELECT cmcm FROM ConfigTypeCable cmcm WHERE cmcm.typeCable = :ftype");
+            query.setParameter("ftype", s);
+            cmcm = (ConfigTypeCable) query.getSingleResult();
+        } catch (Exception e) {
+        } finally {
+            this.close();
+        }
+        return cmcm;
     }
 
 }

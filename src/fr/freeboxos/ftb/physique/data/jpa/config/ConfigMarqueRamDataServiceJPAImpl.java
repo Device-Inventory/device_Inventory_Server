@@ -17,6 +17,7 @@
 package fr.freeboxos.ftb.physique.data.jpa.config;
 
 import fr.freeboxos.ftb.metier.entitys.config.ConfigMarqueRam;
+import javax.persistence.Query;
 import lml.persistence.jpa.AbstracCrudServiceJPA;
 
 /**
@@ -27,6 +28,21 @@ public class ConfigMarqueRamDataServiceJPAImpl extends AbstracCrudServiceJPA<Con
 
     public ConfigMarqueRamDataServiceJPAImpl(String PU) {
         super(PU);
+    }
+
+    @Override
+    public ConfigMarqueRam getByMarqueRam(String s) throws Exception {
+        ConfigMarqueRam cmcm = null;
+        try {
+            this.open();
+            Query query = em.createQuery("SELECT cmcm FROM ConfigMarqueRam cmcm WHERE cmcm.marqueRam = :fmarque");
+            query.setParameter("fmarque", s);
+            cmcm = (ConfigMarqueRam) query.getSingleResult();
+        } catch (Exception e) {
+        } finally {
+            this.close();
+        }
+        return cmcm;
     }
 
 }

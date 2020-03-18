@@ -25,4 +25,5 @@ import lml.persistence.CrudService;
  */
 public interface ConfigSupportDuProcesseurDataService extends CrudService<ConfigSupportDuProcesseur> {
 
+    public ConfigSupportDuProcesseur getByConfigSupportDuProcesseur(String s) throws Exception;
 }

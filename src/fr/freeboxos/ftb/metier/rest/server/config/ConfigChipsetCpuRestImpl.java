@@ -82,4 +82,10 @@ public class ConfigChipsetCpuRestImpl {
         return configChipsetCpuService.getAll(i, i1);
     }
 
+    @GET
+    @Path("/chipset/{chipset}")
+    public ConfigChipsetCpu getByChipset(@PathParam("chipset") String chipset) throws Exception {
+        return configChipsetCpuService.getByChipset(chipset);
+    }
+
 }

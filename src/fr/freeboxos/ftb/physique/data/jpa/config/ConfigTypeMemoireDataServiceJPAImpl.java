@@ -17,6 +17,7 @@
 package fr.freeboxos.ftb.physique.data.jpa.config;
 
 import fr.freeboxos.ftb.metier.entitys.config.ConfigTypeMemoire;
+import javax.persistence.Query;
 import lml.persistence.jpa.AbstracCrudServiceJPA;
 
 /**
@@ -27,6 +28,21 @@ public class ConfigTypeMemoireDataServiceJPAImpl extends AbstracCrudServiceJPA<C
 
     public ConfigTypeMemoireDataServiceJPAImpl(String PU) {
         super(PU);
+    }
+
+    @Override
+    public ConfigTypeMemoire getByTypeMemoire(String s) throws Exception {
+        ConfigTypeMemoire cmcm = null;
+        try {
+            this.open();
+            Query query = em.createQuery("SELECT cmcm FROM ConfigTypeMemoire cmcm WHERE cmcm.typeMemoire = :ftype");
+            query.setParameter("ftype", s);
+            cmcm = (ConfigTypeMemoire) query.getSingleResult();
+        } catch (Exception e) {
+        } finally {
+            this.close();
+        }
+        return cmcm;
     }
 
 }

@@ -64,4 +64,9 @@ public class ConfigSupportDuProcesseurServiceImpl implements ConfigSupportDuProc
         return this.configSupportDuProcesseurDataService.getAll(i, i1);
     }
 
+    @Override
+    public ConfigSupportDuProcesseur getByConfigSupportDuProcesseur(String s) throws Exception {
+        return this.configSupportDuProcesseurDataService.getByConfigSupportDuProcesseur(s);
+    }
+
 }

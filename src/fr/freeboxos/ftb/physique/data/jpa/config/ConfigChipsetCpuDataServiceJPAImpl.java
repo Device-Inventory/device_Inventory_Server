@@ -17,12 +17,28 @@
 package fr.freeboxos.ftb.physique.data.jpa.config;
 
 import fr.freeboxos.ftb.metier.entitys.config.ConfigChipsetCpu;
+import javax.persistence.Query;
 import lml.persistence.jpa.AbstracCrudServiceJPA;
 
 public class ConfigChipsetCpuDataServiceJPAImpl extends AbstracCrudServiceJPA<ConfigChipsetCpu> implements ConfigChipsetCpuDataService {
 
     public ConfigChipsetCpuDataServiceJPAImpl(String PU) {
         super(PU);
+    }
+
+    @Override
+    public ConfigChipsetCpu getByChipset(String chipset) throws Exception {
+        ConfigChipsetCpu ccc = null;
+        try {
+            this.open();
+            Query query = em.createQuery("SELECT ccc FROM ConfigChipsetCpu ccc WHERE ccc.chipsetCpu = :fchipset");
+            query.setParameter("fchipset", chipset);
+            ccc = (ConfigChipsetCpu) query.getSingleResult();
+        } catch (Exception e) {
+        } finally {
+            this.close();
+        }
+        return ccc;
     }
 
 }

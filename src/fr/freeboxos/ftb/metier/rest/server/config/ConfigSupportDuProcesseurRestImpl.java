@@ -82,4 +82,10 @@ public class ConfigSupportDuProcesseurRestImpl {
         return configSupportDuProcesseurService.getAll(i, i1);
     }
 
+    @GET
+    @Path("/supportduprocesseur/{supportduprocesseur}")
+    public ConfigSupportDuProcesseur getByConfigSupportDuProcesseur(@PathParam("supportduprocesseur") String s) throws Exception {
+        return configSupportDuProcesseurService.getByConfigSupportDuProcesseur(s);
+    }
+
 }

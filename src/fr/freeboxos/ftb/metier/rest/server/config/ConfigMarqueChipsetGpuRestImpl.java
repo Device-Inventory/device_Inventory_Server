@@ -82,4 +82,10 @@ public class ConfigMarqueChipsetGpuRestImpl {
         return configMarqueChipsetGpuService.getAll(i, i1);
     }
 
+    @GET
+    @Path("/marque/{marque}")
+    public ConfigMarqueChipsetGpu getByMarqueChipsetGpu(@PathParam("marque") String s) throws Exception {
+        return configMarqueChipsetGpuService.getByMarqueChipsetGpu(s);
+    }
+
 }

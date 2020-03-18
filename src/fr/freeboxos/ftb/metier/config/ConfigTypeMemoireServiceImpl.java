@@ -63,4 +63,9 @@ public class ConfigTypeMemoireServiceImpl implements ConfigTypeMemoireService {
     public List<ConfigTypeMemoire> getAll(int i, int i1) throws Exception {
         return this.configTypeMemoireDataService.getAll(i, i1);
     }
+
+    @Override
+    public ConfigTypeMemoire getByTypeMemoire(String s) throws Exception {
+        return this.configTypeMemoireDataService.getByTypeMemoire(s);
+    }
 }

@@ -17,6 +17,7 @@
 package fr.freeboxos.ftb.physique.data.jpa.config;
 
 import fr.freeboxos.ftb.metier.entitys.config.ConfigTypeSsd;
+import javax.persistence.Query;
 import lml.persistence.jpa.AbstracCrudServiceJPA;
 
 /**
@@ -27,6 +28,21 @@ public class ConfigTypeSsdDataServiceJPAImpl extends AbstracCrudServiceJPA<Confi
 
     public ConfigTypeSsdDataServiceJPAImpl(String PU) {
         super(PU);
+    }
+
+    @Override
+    public ConfigTypeSsd getByTypeSsd(String s) throws Exception {
+        ConfigTypeSsd cmcm = null;
+        try {
+            this.open();
+            Query query = em.createQuery("SELECT cmcm FROM ConfigTypeSsd cmcm WHERE cmcm.typeSsd = :ftype");
+            query.setParameter("ftype", s);
+            cmcm = (ConfigTypeSsd) query.getSingleResult();
+        } catch (Exception e) {
+        } finally {
+            this.close();
+        }
+        return cmcm;
     }
 
 }

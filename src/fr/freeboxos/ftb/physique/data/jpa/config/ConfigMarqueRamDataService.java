@@ -25,4 +25,5 @@ import lml.persistence.CrudService;
  */
 public interface ConfigMarqueRamDataService extends CrudService<ConfigMarqueRam> {
 
+    public ConfigMarqueRam getByMarqueRam(String s) throws Exception;
 }

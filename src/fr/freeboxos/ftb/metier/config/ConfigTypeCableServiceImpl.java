@@ -64,4 +64,9 @@ public class ConfigTypeCableServiceImpl implements ConfigTypeCableService {
         return this.configTypeCableDataService.getAll(i, i1);
     }
 
+    @Override
+    public ConfigTypeCable getByTypeCable(String s) throws Exception {
+        return this.configTypeCableDataService.getByTypeCable(s);
+    }
+
 }

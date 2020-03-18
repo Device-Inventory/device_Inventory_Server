@@ -64,4 +64,9 @@ public class ConfigMarqueCarteMereServiceImpl implements ConfigMarqueCarteMereSe
         return this.configMarqueCarteMereDataService.getAll(i, i1);
     }
 
+    @Override
+    public ConfigMarqueCarteMere getByMarqueCarteMere(String s) throws Exception {
+        return this.configMarqueCarteMereDataService.getByMarqueCarteMere(s);
+    }
+
 }

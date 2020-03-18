@@ -17,6 +17,7 @@
 package fr.freeboxos.ftb.physique.data.jpa.config;
 
 import fr.freeboxos.ftb.metier.entitys.config.ConfigFormatCarteMere;
+import javax.persistence.Query;
 import lml.persistence.jpa.AbstracCrudServiceJPA;
 
 /**
@@ -27,6 +28,22 @@ public class ConfigFormatCarteMereDataServiceJPAImpl extends AbstracCrudServiceJ
 
     public ConfigFormatCarteMereDataServiceJPAImpl(String PU) {
         super(PU);
+    }
+
+    @Override
+    public ConfigFormatCarteMere getByFormatCarteMere(String format) throws Exception {
+        ConfigFormatCarteMere configFormatCarteMere = null;
+        try {
+            this.open();
+            Query query = em.createQuery("SELECT configFormatCarteMere FROM ConfigFormatCarteMere configFormatCarteMere WHERE configFormatCarteMere.formatCarteMere = :fformat");
+            query.setParameter("fformat", format);
+            configFormatCarteMere = (ConfigFormatCarteMere) query.getSingleResult();
+        } catch (Exception e) {
+        } finally {
+            this.close();
+
+        }
+        return configFormatCarteMere;
     }
 
 }

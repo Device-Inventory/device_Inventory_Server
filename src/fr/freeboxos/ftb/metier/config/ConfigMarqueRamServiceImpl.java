@@ -64,4 +64,9 @@ public class ConfigMarqueRamServiceImpl implements ConfigMarqueRamService {
         return this.configMarqueRamDataService.getAll(i, i1);
     }
 
+    @Override
+    public ConfigMarqueRam getByMarqueRam(String s) throws Exception {
+        return this.configMarqueRamDataService.getByMarqueRam(s);
+    }
+
 }

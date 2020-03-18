@@ -82,4 +82,10 @@ public class ConfigTypeCableRestImpl {
         return configTypeCableService.getAll(i, i1);
     }
 
+    @GET
+    @Path("/type/{type}")
+    public ConfigTypeCable getByTypeCable(@PathParam("type") String s) throws Exception {
+        return configTypeCableService.getByTypeCable(s);
+    }
+
 }

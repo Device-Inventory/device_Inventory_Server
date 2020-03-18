@@ -82,4 +82,10 @@ public class ConfigMarqueHddRestImpl {
         return configMarqueHddService.getAll(i, i1);
     }
 
+    @GET
+    @Path("/marque/{marque}")
+    public ConfigMarqueHdd getByMarqueHdd(@PathParam("marque") String s) throws Exception {
+        return configMarqueHddService.getByMarqueHdd(s);
+    }
+
 }

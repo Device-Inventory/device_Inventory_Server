@@ -60,4 +60,9 @@ public class ConfigChipsetCpuServiceImpl implements ConfigChipsetCpuService {
         return this.configChipsetCpuDataService.getAll(i, i1);
     }
 
+    @Override
+    public ConfigChipsetCpu getByChipset(String chipset) throws Exception {
+        return this.configChipsetCpuDataService.getByChipset(chipset);
+    }
+
 }

@@ -82,4 +82,10 @@ public class ConfigFormatCarteMereRestImpl {
         return configFormatCarteMereService.getAll(i, i1);
     }
 
+    @GET
+    @Path("/format/{format}")
+    public ConfigFormatCarteMere getByFormatCarteMere(@PathParam("format") String format) throws Exception {
+        return configFormatCarteMereService.getByFormatCarteMere(format);
+    }
+
 }

@@ -64,4 +64,9 @@ public class ConfigMarqueChipsetGpuServiceImpl implements ConfigMarqueChipsetGpu
         return this.configMarqueChipsetGpuDataService.getAll(i, i1);
     }
 
+    @Override
+    public ConfigMarqueChipsetGpu getByMarqueChipsetGpu(String s) throws Exception {
+        return this.configMarqueChipsetGpuDataService.getByMarqueChipsetGpu(s);
+    }
+
 }

@@ -64,4 +64,9 @@ public class ConfigMarqueGpuServiceImpl implements ConfigMarqueGpuService {
         return this.configMarqueGpuDataService.getAll(i, i1);
     }
 
+    @Override
+    public ConfigMarqueGpu getByMarqueGpu(String s) throws Exception {
+        return this.configMarqueGpuDataService.getByMarqueGpu(s);
+    }
+
 }

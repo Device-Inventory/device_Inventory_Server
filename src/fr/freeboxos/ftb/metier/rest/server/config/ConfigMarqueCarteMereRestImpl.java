@@ -82,4 +82,10 @@ public class ConfigMarqueCarteMereRestImpl {
         return configMarqueCarteMereService.getAll(i, i1);
     }
 
+    @GET
+    @Path("/marque/{marque}")
+    public ConfigMarqueCarteMere getByMarqueCarteMere(@PathParam("marque") String s) throws Exception {
+        return configMarqueCarteMereService.getByMarqueCarteMere(s);
+    }
+
 }

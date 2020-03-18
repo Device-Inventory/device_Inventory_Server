@@ -25,4 +25,5 @@ import lml.persistence.CrudService;
  */
 public interface ConfigTypeSsdService extends CrudService<ConfigTypeSsd> {
 
+    public ConfigTypeSsd getByTypeSsd(String s) throws Exception;
 }

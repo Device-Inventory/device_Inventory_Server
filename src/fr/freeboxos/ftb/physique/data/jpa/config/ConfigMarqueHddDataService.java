@@ -25,4 +25,5 @@ import lml.persistence.CrudService;
  */
 public interface ConfigMarqueHddDataService extends CrudService<ConfigMarqueHdd> {
 
+    public ConfigMarqueHdd getByMarqueHdd(String s) throws Exception;
 }

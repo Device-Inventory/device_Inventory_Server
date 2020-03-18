@@ -25,4 +25,5 @@ import lml.persistence.CrudService;
  */
 public interface ConfigFormatCarteMereDataService extends CrudService<ConfigFormatCarteMere> {
 
+    public ConfigFormatCarteMere getByFormatCarteMere(String format) throws Exception;
 }

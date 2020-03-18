@@ -25,4 +25,5 @@ import lml.persistence.CrudService;
  */
 public interface ConfigMarqueCarteMereDataService extends CrudService<ConfigMarqueCarteMere> {
 
+    public ConfigMarqueCarteMere getByMarqueCarteMere(String s) throws Exception;
 }

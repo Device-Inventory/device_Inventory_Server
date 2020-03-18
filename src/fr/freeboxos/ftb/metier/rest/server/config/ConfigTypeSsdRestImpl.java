@@ -82,4 +82,10 @@ public class ConfigTypeSsdRestImpl {
         return configTypeSsdService.getAll(i, i1);
     }
 
+    @GET
+    @Path("/type/{type}")
+    public ConfigTypeSsd getByTypeSsd(@PathParam("type") String s) throws Exception {
+        return configTypeSsdService.getByTypeSsd(s);
+    }
+
 }

@@ -64,4 +64,9 @@ public class ConfigTypeSsdServiceImpl implements ConfigTypeSsdService {
         return this.configTypeSsdDataService.getAll(i, i1);
     }
 
+    @Override
+    public ConfigTypeSsd getByTypeSsd(String s) throws Exception {
+        return this.configTypeSsdDataService.getByTypeSsd(s);
+    }
+
 }

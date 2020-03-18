@@ -25,4 +25,5 @@ import lml.persistence.CrudService;
  */
 public interface ConfigChipsetCpuService extends CrudService<ConfigChipsetCpu> {
 
+    public ConfigChipsetCpu getByChipset(String chipset) throws Exception;
 }

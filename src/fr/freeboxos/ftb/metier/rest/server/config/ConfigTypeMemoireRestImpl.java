@@ -82,4 +82,10 @@ public class ConfigTypeMemoireRestImpl {
         return configTypeMemoireService.getAll(i, i1);
     }
 
+    @GET
+    @Path("/type/{type}")
+    public ConfigTypeMemoire getByTypeMemoire(@PathParam("type") String s) throws Exception {
+        return configTypeMemoireService.getByTypeMemoire(s);
+    }
+
 }

@@ -82,4 +82,10 @@ public class ConfigMarqueRamRestImpl {
         return configMarqueRamService.getAll(i, i1);
     }
 
+    @GET
+    @Path("/marque/{marque}")
+    public ConfigMarqueRam getByMarqueRam(@PathParam("marque") String s) throws Exception {
+        return configMarqueRamService.getByMarqueRam(s);
+    }
+
 }

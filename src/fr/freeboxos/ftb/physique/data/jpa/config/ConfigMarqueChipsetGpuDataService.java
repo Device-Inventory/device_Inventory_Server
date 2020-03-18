@@ -25,4 +25,5 @@ import lml.persistence.CrudService;
  */
 public interface ConfigMarqueChipsetGpuDataService extends CrudService<ConfigMarqueChipsetGpu> {
 
+    public ConfigMarqueChipsetGpu getByMarqueChipsetGpu(String s) throws Exception;
 }

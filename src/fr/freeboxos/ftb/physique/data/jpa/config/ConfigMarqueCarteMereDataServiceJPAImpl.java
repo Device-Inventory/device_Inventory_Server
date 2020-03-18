@@ -17,6 +17,7 @@
 package fr.freeboxos.ftb.physique.data.jpa.config;
 
 import fr.freeboxos.ftb.metier.entitys.config.ConfigMarqueCarteMere;
+import javax.persistence.Query;
 import lml.persistence.jpa.AbstracCrudServiceJPA;
 
 /**
@@ -27,6 +28,21 @@ public class ConfigMarqueCarteMereDataServiceJPAImpl extends AbstracCrudServiceJ
 
     public ConfigMarqueCarteMereDataServiceJPAImpl(String PU) {
         super(PU);
+    }
+
+    @Override
+    public ConfigMarqueCarteMere getByMarqueCarteMere(String s) throws Exception {
+        ConfigMarqueCarteMere cmcm = null;
+        try {
+            this.open();
+            Query query = em.createQuery("SELECT cmcm FROM ConfigFormatCarteMere cmcm WHERE cmcm.formatCarteMere = :fmarque");
+            query.setParameter("fmarque", s);
+            cmcm = (ConfigMarqueCarteMere) query.getSingleResult();
+        } catch (Exception e) {
+        } finally {
+            this.close();
+        }
+        return cmcm;
     }
 
 }

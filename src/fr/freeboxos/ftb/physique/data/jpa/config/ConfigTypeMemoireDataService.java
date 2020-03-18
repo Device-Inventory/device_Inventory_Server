@@ -25,4 +25,5 @@ import lml.persistence.CrudService;
  */
 public interface ConfigTypeMemoireDataService extends CrudService<ConfigTypeMemoire> {
 
+    public ConfigTypeMemoire getByTypeMemoire(String s) throws Exception;
 }
